@@ -12,5 +12,16 @@
   "type": "commonjs",
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AbelAlmada92/PracticaNode_ArmadoServer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbelAlmada92/PracticaNode_ArmadoServer/issues"
+  },
+  "homepage": "https://github.com/AbelAlmada92/PracticaNode_ArmadoServer#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

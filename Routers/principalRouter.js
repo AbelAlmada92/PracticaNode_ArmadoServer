@@ -5,23 +5,23 @@ const HOME = fs.readFileSync('./vistas/home.html')
 const API = fs.readFileSync('./vistas/api.html')
 const lenguajes = require('../src/lenguajes').infoLenguajes
 
-const routerPrincipalAPI = express.Router()
+const routerPrincipalApi = express.Router()
 
-routerPrincipalAPI.get('/home',(req, res) =>{
+routerPrincipalApi.get('/home',(req, res) =>{
     console.log("Entrando en la raiz de la API")
-    res.setHeader('Content-type', 'text/html')
+    res.setHeader('Content-Type', 'text/html')
     res.status(200).send(HOME)
 })
 
 
-routerPrincipalAPI.get('/',(req, res) =>{
-    console.log("Entrando en la ruta del API")
-      res.setHeader('Content-type', 'text/html')
+routerPrincipalApi.get('/',(req, res) =>{
+    console.log("Entrando en la ruta del /api...")
+      res.setHeader('Content-Type', 'text/html')
     //res.setHeader('Content-type', 'text/html')
     res.status(200).send(API)
 })
 
-routerPrincipalAPI.get('/lenguajes', (req, res)=>{
+routerPrincipalApi.get('/lenguajes', (req, res)=>{
     console.log("Entrando en la ruta /api/lenguajes ")
     const miJsonLenguajes = JSON.stringify(lenguajes)
     console.log(miJsonLenguajes)
@@ -31,4 +31,4 @@ routerPrincipalAPI.get('/lenguajes', (req, res)=>{
 })
 
 
-module.exports = routerPrincipalAPI
+module.exports = routerPrincipalApi

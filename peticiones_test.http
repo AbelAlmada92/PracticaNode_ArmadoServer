@@ -1,0 +1,54 @@
+GET http://127.0.0.1:3001/127.0.0.1:3001/api/lenguajes/frontend HTTP/1.1
+
+
+#Url de pruba frontend
+###
+GET http://127.0.0.1:3000/api/lenguajes/ HTTP/1.1
+
+
+###
+GET http://127.0.0.1:3000/api/lenguajes/frontend HTTP/1.1
+
+###
+GET http://127.0.0.1:3000/api/lenguajes/frontend/Typescript HTTP/1.1
+
+
+####
+GET http://127.0.0.1:3000/api/lenguajes/frontend/nuevoMetodo HTTP/1.1
+
+
+###
+POST  http://127.0.0.1:3000/api/lenguajes/frontend/ HTTP/1.1
+Content-Type: application/json
+
+#Importante dejar un espacio ya que el protocolo no desconoce el BODY
+        {
+            "id":7,
+            "nombre": "Lenguage de prueba",
+            "turno": "Noche",
+            "comision": "Z",
+            "cantidad": 1550
+        }
+
+
+
+## Modificar
+#Importante dejar un espacio ya que el protocolo no desconoce el BODY
+###
+PUT  http://127.0.0.1:3000/api/lenguajes/frontend/2 HTTP/1.1
+Content-Type: application/json
+
+        {
+            "id":43,
+            "nombre": "Lenguage de prueba 2",
+            "turno": "Tarde",
+            "comision": "R",
+            "cantidad": 155
+        }
+
+
+
+## Borrado
+### 
+DELETE   http://127.0.0.1:3000/api/lenguajes/frontend/3 HTTP/1.1
+Content-Type: application/json
